@@ -4,11 +4,10 @@ After=network.service syslog.service
 StartLimitIntervalSec=0
 
 [Service]
-TimeoutStartSec=0
 EnvironmentFile=/etc/default/fleet-orbit
 ExecStart=/opt/fleet-orbit/bin/orbit/orbit
 Restart=always
-RestartSec=1
+RestartSec=15s
 KillMode=control-group
 KillSignal=SIGTERM
 CPUQuota=20%
