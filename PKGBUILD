@@ -1,5 +1,3 @@
-# Maintainer: Gilbert Gilb's <gilbsgilbert@gmail.com>
-
 pkgname=fleet-orbit
 pkgver=1.63.0
 pkgrel=1
@@ -16,18 +14,15 @@ backup=(etc/default/fleet-orbit)
 optdepends=()
 source=(
   'https://github.com/fleetdm/fleet/archive/refs/tags/orbit-v1.63.0.tar.gz'
-  'fleet-orbit'
   'fleet-orbit-cleanup.hook'
   'fleet-orbit-config'
   'fleet-orbit.service'
 )
-sha512sums=(
-  '381eb6067c360668fb515fd43be85f756204254303cad201b4edf1751c6a25c2293744ceed1e3aa0d0c4d0a45e5c82e8fe021e3309ba51b3a17f6046586f09fa'
-  'd94ab30cc3543e2cb0abcc520ad2b4a297a22f29798dde7e188caf91e8669d99b60dbde7c513afec908cfd47c74a11537267046f0c8c0ccbcaacb8d1b75dd21d'
-  'c4d4fdf980a891f5e56ca82173c57b60d0e157ef4af769fc5d9ecd7b9c70124402d694f35d48101e6633d0134ade9ab33cff3c129e2f603a6b7df1ee560eab5a'
-  '781ba7743f8f176aeeef702cce67478af70981596029677e1e50f1a57b479c66832436e39d66b5e7f879477733b661326d306064050968acfb246adddfddf30a'
-  '553b5dbdc507d367a2f67d53e4d396342cdc8b9ba8764c116a10d05b06584f4493e932ba2d45da6a1885ab7cb6c9b295bb42160f9c531f8c2b2bc84a2275b31d'
-)
+sha512sums=('381eb6067c360668fb515fd43be85f756204254303cad201b4edf1751c6a25c2293744ceed1e3aa0d0c4d0a45e5c82e8fe021e3309ba51b3a17f6046586f09fa'
+            'c4d4fdf980a891f5e56ca82173c57b60d0e157ef4af769fc5d9ecd7b9c70124402d694f35d48101e6633d0134ade9ab33cff3c129e2f603a6b7df1ee560eab5a'
+            '039ec3fd2f680277d7901adc8f83ebf8461a002bebedb34b9bf24d131dd231d18337da058365b1242ac3645efb0bad1998416d3b191802d40b6a20dc8e082d90'
+            'b6045a361f3e5041a9699da6fff4eaec56cd022a17de219311a8d57c025e8eb5c4c0b61199969b01f5270eda00af542794dc3edbe5ea26a5218d8d7b7828b17b')
+install=fleet-orbit.install
 
 build() {
   cd "${pkgname}-v${pkgver}"
@@ -61,8 +56,6 @@ package() {
 
   install -Dm755 "${pkgname}-v${pkgver}/build/orbit" "${pkgdir}/opt/fleet-orbit/bin/orbit/linux/stable/orbit"
   ln -s "./linux/stable/orbit" "${pkgdir}/opt/fleet-orbit/bin/orbit/orbit"
-
-  install -Dm755 "fleet-orbit" "${pkgdir}/usr/bin/fleet-orbit"
 
   mkdir -p "${pkgdir}/opt/fleet-orbit/bin/osqueryd/linux/stable/"
   ln -s /usr/bin/osqueryd "${pkgdir}/opt/fleet-orbit/bin/osqueryd/linux/stable/osqueryd"

@@ -1,29 +1,11 @@
-# Root directory for Orbit state
-#ORBIT_ROOT_DIR=/opt/fleet-orbit
-
-# Disable TLS certificate verification
-#ORBIT_INSECURE=false
-
-# URL (host:port) of Fleet server
-#ORBIT_FLEET_URL=
-
-# Path to server certificate chain
-#ORBIT_FLEET_CERTIFICATE=
-
-# URL for update server
-#ORBIT_UPDATE_URL=https://tuf.fleetctl.com
-
-# Enroll secret for authenticating to Fleet server
+ORBIT_DESKTOP_CHANNEL=stable
+ORBIT_DISABLE_UPDATES=true
+#ORBIT_END_USER_EMAIL=
 #ORBIT_ENROLL_SECRET=
-
-# Disables auto updates
-#ORBIT_DISABLE_UPDATES=false
-
-# Path to file containing enroll secret
-#ORBIT_ENROLL_SECRET_PATH=
-
-# Runs in development mode
-#ORBIT_DEV_MODE=false
-
-# Enable debug logging
-#ORBIT_DEBUG=false
+ORBIT_FLEET_DESKTOP=true
+ORBIT_FLEET_URL=https://fleet.pylon.mortgage
+ORBIT_ORBIT_CHANNEL=stable
+ORBIT_OSQUERYD_CHANNEL=stable
+ORBIT_ROOT_DIR=/opt/fleet-orbit
+ORBIT_UPDATE_INTERVAL=15m0s
+ORBIT_UPDATE_URL=https://updates.fleetdm.com
