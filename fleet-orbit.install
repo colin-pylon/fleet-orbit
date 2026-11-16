@@ -1,3 +1,5 @@
 post_install() {
-  echo "        Edit /etc/default/fleet-orbit to provide your email and enroll secret."
+  echo "        Required manual setup:"
+  echo "        - Install fleet-desktop from the AUR"
+  echo "        - Add your email and enroll secret to /etc/default/fleet-orbit"
 }
