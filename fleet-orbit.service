@@ -5,6 +5,11 @@ StartLimitIntervalSec=0
 
 [Service]
 EnvironmentFile=/etc/default/fleet-orbit
+Environment=ORBIT_DESKTOP_PATH=/usr/bin/fleet-desktop
+Environment=ORBIT_DISABLE_UPDATES=true
+Environment=ORBIT_FLEET_URL=https://fleet.pylon.mortgage
+Environment=ORBIT_OSQUERYD_PATH=/usr/bin/osqueryd
+Environment=ORBIT_ROOT_DIR=/opt/fleet-orbit
 ExecStart=/opt/fleet-orbit/bin/orbit/orbit
 Restart=always
 RestartSec=15s

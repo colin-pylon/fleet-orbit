@@ -1,11 +1,5 @@
-ORBIT_DESKTOP_CHANNEL=stable
-ORBIT_DISABLE_UPDATES=true
-#ORBIT_END_USER_EMAIL=
-#ORBIT_ENROLL_SECRET=
-ORBIT_FLEET_DESKTOP=true
-ORBIT_FLEET_URL=https://fleet.pylon.mortgage
-ORBIT_ORBIT_CHANNEL=stable
-ORBIT_OSQUERYD_CHANNEL=stable
-ORBIT_ROOT_DIR=/opt/fleet-orbit
-ORBIT_UPDATE_INTERVAL=15m0s
-ORBIT_UPDATE_URL=https://updates.fleetdm.com
+ORBIT_END_USER_EMAIL=
+ORBIT_ENROLL_SECRET=
+
+# If you want the tray icon, install fleet-desktop from the AUR and uncomment this:
+#ORBIT_FLEET_DESKTOP=false
