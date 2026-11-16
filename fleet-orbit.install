@@ -1,3 +1,3 @@
 post_install() {
-  echo "Edit /etc/default/fleet-orbit to provide your email and enroll secret"
+  echo "        Edit /etc/default/fleet-orbit to provide your email and enroll secret."
 }
