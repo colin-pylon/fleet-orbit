@@ -2,4 +2,4 @@ ORBIT_END_USER_EMAIL=
 ORBIT_ENROLL_SECRET=
 
 # If you want the tray icon, install fleet-desktop from the AUR and uncomment this:
-#ORBIT_FLEET_DESKTOP=false
+#ORBIT_FLEET_DESKTOP=true
